@@ -28,6 +28,7 @@ Partial Class Administrador
         Me.lblContraseñaAdmin = New System.Windows.Forms.Label()
         Me.txtContraseñaAdmin = New System.Windows.Forms.TextBox()
         Me.btnEntrarAdmin = New System.Windows.Forms.Button()
+        Me.MostrarContraseña = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'lblAdmin
@@ -71,11 +72,22 @@ Partial Class Administrador
         Me.btnEntrarAdmin.Text = "ACCEDER"
         Me.btnEntrarAdmin.UseVisualStyleBackColor = True
         '
+        'MostrarContraseña
+        '
+        Me.MostrarContraseña.AutoSize = True
+        Me.MostrarContraseña.Location = New System.Drawing.Point(184, 136)
+        Me.MostrarContraseña.Name = "MostrarContraseña"
+        Me.MostrarContraseña.Size = New System.Drawing.Size(117, 17)
+        Me.MostrarContraseña.TabIndex = 5
+        Me.MostrarContraseña.Text = "Mostrar contraseña"
+        Me.MostrarContraseña.UseVisualStyleBackColor = True
+        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(445, 255)
+        Me.Controls.Add(Me.MostrarContraseña)
         Me.Controls.Add(Me.btnEntrarAdmin)
         Me.Controls.Add(Me.txtContraseñaAdmin)
         Me.Controls.Add(Me.lblContraseñaAdmin)
@@ -96,4 +108,5 @@ Partial Class Administrador
     Friend WithEvents lblContraseñaAdmin As Label
     Friend WithEvents txtContraseñaAdmin As TextBox
     Friend WithEvents btnEntrarAdmin As Button
+    Friend WithEvents MostrarContraseña As CheckBox
 End Class

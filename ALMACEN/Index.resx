@@ -1939,7 +1939,7 @@
     <value>Popup</value>
   </data>
   <data name="btnInstrucciones.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 409</value>
+    <value>36, 409</value>
   </data>
   <data name="btnInstrucciones.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 38</value>
@@ -2020,7 +2020,7 @@
     <value>Popup</value>
   </data>
   <data name="btnSalir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 409</value>
+    <value>313, 409</value>
   </data>
   <data name="btnSalir.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 38</value>

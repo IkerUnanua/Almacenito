@@ -208,7 +208,7 @@ Partial Class Juego
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(763, 160)
+        Me.btnReset.Location = New System.Drawing.Point(763, 129)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(75, 23)
         Me.btnReset.TabIndex = 28

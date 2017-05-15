@@ -6,7 +6,7 @@ Public Class index
     End Sub
 
     Private Sub btnAdministrador_Click(sender As Object, e As EventArgs) Handles btnAdministrador.Click
-        Administrador.ShowDialog()
+        administradorLogin.ShowDialog()
     End Sub
 
     Private Sub btnInstrucciones_Click(sender As Object, e As EventArgs) Handles btnInstrucciones.Click

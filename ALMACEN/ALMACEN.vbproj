@@ -72,10 +72,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="administrador.Designer.vb">
-      <DependentUpon>administrador.vb</DependentUpon>
+    <Compile Include="Administrador.Designer.vb">
+      <DependentUpon>Administrador.vb</DependentUpon>
     </Compile>
-    <Compile Include="administrador.vb">
+    <Compile Include="Administrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administradorLogin.Designer.vb">
+      <DependentUpon>administradorLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="administradorLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Index.vb">
@@ -97,6 +103,7 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -120,8 +127,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="administrador.resx">
-      <DependentUpon>administrador.vb</DependentUpon>
+    <EmbeddedResource Include="Administrador.resx">
+      <DependentUpon>Administrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administradorLogin.resx">
+      <DependentUpon>administradorLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.vb</DependentUpon>
@@ -154,6 +164,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaClases\CapaClases.vbproj">
+      <Project>{DD06EBAD-0B28-4704-9C2F-4A9F4586A792}</Project>
+      <Name>CapaClases</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

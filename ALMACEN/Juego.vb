@@ -6,7 +6,7 @@
         fileReader = My.Computer.FileSystem.OpenTextFileReader("articulos.txt")
         Dim stringReader As String
         Dim lines As String()
-        Dim lines2 As String()
+
         Dim cont As Integer = 0
 
         'Bucle recorre fichero
@@ -15,40 +15,37 @@
             'Analizar cada una de las líneas
             stringReader = fileReader.ReadLine()
             lines = stringReader.Split(":")
-            Dim stringReader2 As String
-            stringReader2 = fileReader.ReadLine()
-            lines2 = stringReader2.Split(":")
             Select Case cont
                 Case 0
                     Button1.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 1
                     Button2.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 2
                     Button3.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 3
                     Button4.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 4
                     Button5.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 5
                     Button6.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 6
                     Button7.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 7
                     Button8.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 8
                     Button9.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
                 Case 9
                     Button10.Text = lines(1)
-                    tienda.Añadir(lines(1), lines2(1), 50)
+                    tienda.Añadir(lines(1), 50)
             End Select
 
             cont = cont + 1
@@ -85,7 +82,7 @@
             Dim stock As Integer = 0
             If tienda.Articulos(i).Nombre = boton.Text Then
                 lstPedidos.Items.Add(cantidadStr + "-" + boton.Text)
-                precio = precio + tienda.Articulos(i).Precio
+
                 stock = tienda.Articulos(i).Stock
                 stock = stock - cantidad
                 tienda.Articulos(i).Stock = stock

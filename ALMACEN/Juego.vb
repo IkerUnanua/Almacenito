@@ -54,10 +54,13 @@
             End If
         Loop Until cont = 10
 
-
-
-
-
+        Dim stock As String
+        Dim nombre As String
+        For i = 0 To tienda.Articulos.Count - 1
+            nombre = tienda.Articulos(i).Nombre
+            stock = tienda.Articulos(i).Stock
+            lstAlmacen.Items.Add(stock + "-" + nombre)
+        Next
 
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click, Button3.Click, Button4.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click
@@ -68,6 +71,7 @@
         Dim respuestaStr As String
         Dim respuesta As Integer
         Dim stockStr As String
+        Dim num As Integer = 0
         Dim boton As Button = TryCast(sender, Button)
         pCarrito.Visible = True
         'No se meten espacios en blanco o nada. Disculpen las molestias, estamos trabajando arduamente para solucionar el problema. Arkaitz esta hablando con sus contactos para solucionar el problema.
@@ -77,7 +81,17 @@
                 booleano = False
                 MsgBox("Error, número no válido")
             End If
-        Loop Until booleano = True AndAlso cantidad <= 50
+            Dim booleano3 As Boolean = False
+            For i = 0 To tienda.Articulos.Count - 1
+                If Button1.Text = tienda.Articulos(i).Nombre Then
+                    num = i
+                    booleano3 = True
+                End If
+                If booleano3 = False Then
+                    MsgBox("Error, número mayor al stock")
+                End If
+            Next
+        Loop Until booleano = True AndAlso cantidad <= tienda.Articulos(num).Stock
         For i = 0 To tienda.Articulos.Count - 1
             Dim stock As Integer = 0
             If tienda.Articulos(i).Nombre = boton.Text Then
@@ -105,7 +119,7 @@
         Next
 
 
-
+        btnComprar.Enabled = True
         boton.Enabled = False
     End Sub
 
@@ -128,6 +142,16 @@
             cantidadTotalStr = cantidadTotal
             MsgBox("Lo sentimos, la cantidad pedida es de " + cantidadTotalStr + " .Esperamos que tenga más suerte la próxima vez =)")
         End If
+
+        lstAlmacen.Items.Clear()
+        Dim stock As String
+        Dim nombre As String
+        For i = 0 To tienda.Articulos.Count - 1
+            nombre = tienda.Articulos(i).Nombre
+            stock = tienda.Articulos(i).Stock
+            lstAlmacen.Items.Add(stock + "-" + nombre)
+        Next
+        btnComprar.Enabled = False
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
@@ -147,5 +171,6 @@
         For i = 0 To tienda.Articulos.Count - 1
             tienda.Articulos(i).Stock = 50
         Next
+
     End Sub
 End Class

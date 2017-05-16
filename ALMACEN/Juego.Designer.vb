@@ -63,7 +63,7 @@ Partial Class Juego
         Me.lstPedidos.ItemHeight = 17
         Me.lstPedidos.Location = New System.Drawing.Point(628, 61)
         Me.lstPedidos.Name = "lstPedidos"
-        Me.lstPedidos.Size = New System.Drawing.Size(120, 140)
+        Me.lstPedidos.Size = New System.Drawing.Size(120, 157)
         Me.lstPedidos.TabIndex = 12
         '
         'Label1
@@ -193,7 +193,7 @@ Partial Class Juego
         Me.lstAlmacen.ItemHeight = 17
         Me.lstAlmacen.Location = New System.Drawing.Point(406, 61)
         Me.lstAlmacen.Name = "lstAlmacen"
-        Me.lstAlmacen.Size = New System.Drawing.Size(120, 140)
+        Me.lstAlmacen.Size = New System.Drawing.Size(120, 157)
         Me.lstAlmacen.TabIndex = 26
         '
         'Label3
@@ -208,7 +208,7 @@ Partial Class Juego
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(763, 132)
+        Me.btnReset.Location = New System.Drawing.Point(763, 149)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(75, 23)
         Me.btnReset.TabIndex = 28
